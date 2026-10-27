@@ -1,0 +1,32 @@
+{
+  "scope": "Actual local shared test server, SQLite and independent browser sessions. No live StoreHouse connection.",
+  "checks": [
+    "The selectable PDF catalog keeps printed codes, names, groups and units distinct; 134 and 187 Bazsalikom are separate and 521 Pepsi is searchable. Quantities remain synthetic, external IDs unbound.",
+    "A reviewed multi-tablet issue has one source deduction and one receiver addition, with distinct named actors and server timestamps. Review alone has no stock effect.",
+    "Restarting the server and reloading the browser preserve stock, audit history, sessions and the manager draft; the receiver cannot see that personal draft.",
+    "A stale form from another tablet is rejected without overwriting the newer work or losing the entered quantities.",
+    "A pending issue can be cancelled only with the physical-source check and a reason; the reservation returns once, the original record remains and no waste is fabricated.",
+    "An intentionally lost reply leaves an explicitly uncertain command; checking its persisted result recovers the accepted move without another stock write.",
+    "Changing the assigned receiver and deputy preserves the pending transfer and all stock, while recording the previous and new named responsibility.",
+    "A closed issue is corrected by a separately reviewed and confirmed return linked to its original record; the original quantities and timestamps are unchanged, and only the compensating quantity moves.",
+    "An opened bar shift remains visibly accountable. A manager can interrupt a started count with a reason, release its movement pause and preserve stock without inventing a correction.",
+    "A cancelled count can be started again, submitted by the assigned receiver and explicitly closed by the manager. Submitted counts do not silently adjust stock; the shift changes from open through counting and submitted to closed.",
+    "Closed and cancelled moves remain reachable from the personal audit trail with original timing and quantities.",
+    "Two devices editing the same personal draft retain both versions and require an explicit server/device choice. Choosing the saved version restores its quantity without a stock command."
+  ],
+  "script_errors": [],
+  "external_requests": [],
+  "screenshots": [
+    "foundations-catalog-tablet.png",
+    "foundations-catalog-mobile.png",
+    "foundations-dashboard-tablet.png",
+    "foundations-dashboard-mobile.png",
+    "foundations-handover-tablet.png",
+    "foundations-handover-mobile.png",
+    "foundations-count-closed-tablet.png",
+    "foundations-count-closed-mobile.png",
+    "foundations-draft-conflict-tablet.png",
+    "foundations-draft-conflict-mobile.png"
+  ],
+  "capture_enabled": true
+}

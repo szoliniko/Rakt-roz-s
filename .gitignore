@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.local/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+
+# Local credentials and downloaded portable runtimes are not project source.
+.env
+.env.*
+!.env.example
+runtime/
+*.log
+*.zip

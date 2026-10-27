@@ -1,0 +1,4 @@
+*.cmd text eol=crlf
+*.eml -text whitespace=cr-at-eol
+# Preserve intentional Markdown line breaks in the unchanged source transcript.
+docs/forrasok/rkeeper-eredeti-atirat.md whitespace=-blank-at-eol

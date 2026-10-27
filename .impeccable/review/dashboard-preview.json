@@ -1,0 +1,28 @@
+{
+  "scope": "Offline standalone dashboard with inline-only CSP and a Playwright-controlled clock; help clock separately checked in an allow-scripts iframe. No real integration or actual Codex viewer claim.",
+  "artifact": "demo/raktar-bemutato-v5.html",
+  "checks": [
+    "The help-only +31 minute demonstration control marks the existing issue late, visibly labels the advanced clock and leaves stock, confirmations and history unchanged.",
+    "Same-place issues retain independent references, quantities, timestamps and oldest-first ordering; their source and receiver stock effects remain separate.",
+    "The third issue warns about existing records, permits a new shipment, updates for destination changes and preserves edited fields and focus during timed refresh.",
+    "At 29:59 the first issue is not late; by the first refresh after 30:00 it turns red with explicit late text automatically. Clock passage changes neither inventory, records nor original timestamps.",
+    "Created, confirmed and resolved timestamps retain UTC instants and display Budapest time, including the next calendar day while the browser timezone is UTC.",
+    "Late and discrepancy filters, receiver place scoping and other-task counters match visible records; confirming one issue closes only that issue and does not execute twice.",
+    "Partial confirmation becomes a warehouse discrepancy, never another late receiver confirmation; the source correction applies once, and the closed history link reopens the same quantities and all three event timestamps without another confirmation control.",
+    "Both workflows initialize offline under inline-only CSP with no script errors or external requests; populated dashboard states fit 1024 and 390 pixels."
+  ],
+  "script_errors": [],
+  "external_requests": [],
+  "screenshots": [
+    "dashboard-normal-tablet.png",
+    "dashboard-normal-mobile.png",
+    "dashboard-issue-warning-tablet.png",
+    "dashboard-issue-warning-mobile.png",
+    "dashboard-overdue-tablet.png",
+    "dashboard-overdue-mobile.png",
+    "dashboard-receiver-tablet.png",
+    "dashboard-receiver-mobile.png",
+    "dashboard-discrepancy-tablet.png",
+    "dashboard-discrepancy-mobile.png"
+  ]
+}

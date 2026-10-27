@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Összefüggő, közös készlettel kipróbálható raktári munkafolyamatok.">
+  <title>Raktár – a napi munka</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#app">Ugrás a feladathoz</a>
+  <div class="demo-bar"><p><strong>Tesztüzem</strong><span>A PDF-ből származó termékekhez próbakészlet tartozik. A valódi r_keeper / StoreHouse adatai nem változnak.</span><span id="demo-clock-notice" hidden></span></p></div>
+  <header class="site-header">
+    <button type="button" class="wordmark" data-view="home">Raktár<span>A napi munka, egy helyen</span></button>
+    <div class="session"><strong id="actor-name">Raktárfelelős</strong><span id="actor-place">Raktári feladatok</span>
+      <button type="button" id="lock-session" class="session-lock" data-action="lock" hidden>Másik dolgozó belépése / zárolás</button>
+    </div>
+  </header>
+  <nav id="nav" class="navigation" aria-label="Fő menü"><button type="button" data-view="home" aria-current="page">Áttekintés</button><button type="button" data-view="stock">Készlet</button><button type="button" data-view="history">Eddigi műveletek</button><button type="button" data-view="help">Segítség</button></nav>
+  <main><div id="connection-status" class="connection-status" hidden></div><div id="pending-command" class="notice warning" role="status" hidden></div><section id="draft-conflict" class="notice warning" hidden></section><div id="draft-status" class="draft-status" role="status" hidden></div><div id="feedback" class="feedback" role="status" aria-live="polite" aria-atomic="true"></div><div id="app" tabindex="-1"><h1>A felület betöltése</h1></div></main>
+  <noscript>A kattintható felülethez JavaScript szükséges.</noscript>
+  <footer class="page-footer">A tesztadatok tárolásának állapota betöltés után jelenik meg.</footer>
+</body>
+</html>

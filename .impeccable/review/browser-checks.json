@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "56 route/role/viewport combinations render without page overflow",
+    "6 dispatched / 5 received / manager resolves pending bottle",
+    "product duplicate validation + new demo product + split destination receipt",
+    "manager records unopened/open return, bar confirms",
+    "bar waste report and separate manager check",
+    "physical pause required; weighed closing pending then correction; partial warehouse count",
+    "same POS sample cannot be deducted twice",
+    "embedded standalone HTML runs with browser offline and zero network requests; direct file URL is blocked by managed Chromium policy",
+    "review fix: textarea limits aligned to model at 240 characters; packaged HTML verified"
+  ],
+  "errors": []
+}

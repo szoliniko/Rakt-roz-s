@@ -1,0 +1,14 @@
+{
+  "scope": "synthetic restricted preview; actual Codex viewer policy unknown",
+  "checks": [
+    "classic package initializes all 7 views for both roles inside sandbox allow-scripts with no data/blob modules",
+    "normal 6/6 transfer explains both employees and ends at warehouse34/bar18, without a false discrepancy step; local retry restores the example",
+    "dispatch6 / receive5 / resolve1 completes in restricted preview",
+    "invalid quantity and disabled role stay blocked; input Enter executes once, textarea Enter does not submit",
+    "count submission remains pending, without correction",
+    "all seven views and both roles fit 1280/1024/768/390px after copy simplification",
+    "zero script errors and zero external requests while browser network is offline"
+  ],
+  "errors": [],
+  "network_requests": []
+}

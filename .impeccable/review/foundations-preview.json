@@ -1,0 +1,8 @@
+{
+  "scope": "Standalone v6 preview only; explicit local storage modes, no shared-server capability claim.",
+  "checks": [
+    "The standalone artifact uses IndexedDB on an ordinary origin; a reviewed PDF-product issue survives reload and makes no server API request.",
+    "An offline opaque allow-scripts iframe supports login, PDF selection, review and local clock demonstration; unavailable persistence is visibly disclosed and no external request occurs."
+  ],
+  "script_errors": []
+}
