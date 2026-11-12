@@ -1,0 +1,14 @@
+{
+  "name":"tordasi-raktar",
+  "main":".local/worker.mjs",
+  "account_id":"f513e7ae91219ef786abdfe691a4a64e",
+  "compatibility_date":"2026-11-12",
+  "compatibility_flags":["nodejs_compat"],
+  "workers_dev":true,
+  "preview_urls":false,
+  "durable_objects":{"bindings":[{"name":"WAREHOUSE","class_name":"Warehouse"}]},
+  "migrations":[{"tag":"v1","new_sqlite_classes":["Warehouse"]}],
+  "vars":{"PUBLIC_ORIGIN":"https://tordasi-raktar.tordasi-szoliniko.workers.dev","ENABLE_RESTART_TEST":"false"},
+  "observability":{"enabled":true,"head_sampling_rate":1,"traces":{"enabled":true}},
+  "build":{"command":"node scripts/build-cloudflare.mjs"}
+}

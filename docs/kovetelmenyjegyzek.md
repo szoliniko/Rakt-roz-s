@@ -30,7 +30,7 @@ A következő felhasználói döntés a [szükséges alapok](alapmukodes-felulvi
 
 Az **elfogadási bizonyíték** oszlop jövőbeli ellenőrzési feltételt ír le, nem már lefutott teszteredményt. A bemutatóban eljátszott készletváltozás önmagában nem bizonyítja a StoreHouse-ban történt rögzítést. A tényleges kapcsolattól függő sorokhoz az adott helyszíni konfiguráción, megfelelő tesztkörnyezetben végzett ellenőrzés és az eredmény visszaolvasása szükséges.
 
-**Kipróbálási elérés (2026. október 27.):** a felhasználó linkkel elérhető, tartós kiszolgálós működést kér, és engedélyezte a GitHub-feltöltést másik Work/Sites munkamenethez. A [hosztolási átadás](hosztolas-atadas.md) ALAP-05/07, KAP-05–07 és NYIT-15 ellenőrzéséhez ad lépéseket. A követelménykör és a 104 azonosító nem változik. Statikus előnézet vagy GitHub-feltöltés nem zárja le a szerveres elérés felhasználói próbáját.
+**Kipróbálási elérés (2026. november 12.):** a [védett Cloudflare-tesztüzem](cloudflare-hosztolas.md) a kért külső HTTPS-címen működik. ALAP-05/07, SZER-02, KAP-05–07 számára igazolt a közös tartós adattár, két külön böngészőben látható ügy, valós újraindítás és új telepítés utáni megőrzés, mentés és új adatbázisba visszaállítás. A [gépi ellenőrzés](cloudflare-ellenorzes.json) és a 62 sikeres helyi teszt ezt a tesztüzemet igazolja. A követelménykör és a 104 azonosító nem változik; az egyes sorok teljes éles feltételeit a hosztolás nem zárja le. NYIT-01 és NYIT-15 nyitott marad.
 
 Állapotok:
 

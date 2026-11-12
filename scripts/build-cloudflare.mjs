@@ -1,0 +1,13 @@
+import {build} from 'esbuild';
+import {readFile,mkdir,writeFile} from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
+const assets={};
+for(const file of ['demo/template.html','demo/style.css','demo/app.mjs','demo/model.mjs','demo/runtime.mjs','src/domain/inventory.mjs','data/test-catalog.mjs'])assets['/'+file]=await readFile(file,'utf8');
+assets['/']=assets['/demo/template.html'].replace('<head>','<head><base href="/demo/"><script>window.__WAREHOUSE_SERVER__=true;</script>').replace('href="#app"','href="/#app"');
+delete assets['/demo/template.html'];
+await mkdir('.local',{recursive:true});
+await writeFile('.local/cloudflare-assets.mjs','export default '+JSON.stringify(assets)+';\n');
+const revision=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
+const dirty=execFileSync('git',['status','--porcelain'],{encoding:'utf8'}).trim()?'-working-tree':'';
+await build({entryPoints:['server/cloudflare-worker.mjs'],bundle:true,format:'esm',platform:'node',target:'es2022',external:['cloudflare:workers','node:*'],outfile:'.local/worker.mjs',define:{BUILD_ID:JSON.stringify(revision+dirty+'-'+new Date().toISOString())},minify:false});
+console.log('Cloudflare application built.');

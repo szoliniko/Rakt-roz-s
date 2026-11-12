@@ -6,6 +6,8 @@
 
 ## A kilenc alap lefedése
 
+**Új, külső bizonyíték – 2026. november 12.:** [védett Cloudflare-tesztüzem](cloudflare-hosztolas.md), **62/62 JavaScript-teszt**, külön Chrome és beépített böngésző, tényleges Durable Object-újraindítás és új telepítés utáni adatmegőrzés, felhős mentésből ellenőrzött SQLite-visszaállítás. A lenti októberi eredmények történeti helyi bizonyítékok maradnak. A StoreHouse-kapcsolat továbbra sincs igazolva.
+
 | Alap | Megvalósítás és felelős réteg | Helyi ellenőrzés | Éles feltétel / fennmaradó határ |
 | --- | --- | --- | --- |
 | 1. Egyszeri rögzítés | Egyedi parancs, tartalomellenőrzés, változatszám és atomi közös tárolás; külön külső végrehajtási állapot. `src/application/`, `src/integrations/`. KAP-04–05. | Dupla beküldés, elveszett válasz, két kliens azonos állapotból, szerver-újraindítás után ismételt azonosító; külső részeredmények és bizonytalanság tesztadapterrel. **Sikeres kiszolgáló-/adapterteszt és böngészős elveszettválasz-próba.** | A StoreHouse tényleges műveletazonosítása és visszaolvasása a helyi API-n igazolandó. |

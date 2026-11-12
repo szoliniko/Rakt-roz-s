@@ -6,7 +6,7 @@ StoreHouse/r_keeper rendszerhez kapcsolódó, közös tableteken használható r
 
 ## Itt kezdd
 
-**Böngészőből elérhető szerver közzététele:** [átadási leírás a következő munkamenetnek](docs/hosztolas-atadas.md). A teljes alkalmazáshoz Node.js-kiszolgáló és tartós adatbázis szükséges; az önálló HTML közzététele csak a helyi előnézetet adja.
+**Védett, közös szerveres tesztüzem:** [Raktár megnyitása](https://tordasi-raktar.tordasi-szoliniko.workers.dev/) · [belépés, tartós tárolás, mentés és ellenőrzött telepítés](docs/cloudflare-hosztolas.md). A Cloudflare-változat a teljes felületet és API-t tartós SQLite-adattárral futtatja; a hozzáférési jelszó külön átadott titok. Az [eredeti hosztolási átadás](docs/hosztolas-atadas.md) megőrzi a kiinduló követelményeket. A helyi Node-változat továbbra is használható.
 
 **Saját Windows-gépen:** a hordozható csomag kibontása után dupla kattintás az `Inditas.cmd` fájlon. Elindítja a helyi kiszolgálót, és megnyitja a böngészőt. [Rövid Windows-indítási útmutató](docs/windows-inditas.md). A futtatókörnyezetet a Windows-csomag tartalmazza; a forráskönyvtár önmagában nem.
 

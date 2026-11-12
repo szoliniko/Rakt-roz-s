@@ -1,0 +1,101 @@
+{
+  "verifiedAt": "2026-11-12T08:12:09.925Z",
+  "origin": "https://tordasi-raktar.tordasi-szoliniko.workers.dev",
+  "anonymous": {
+    "/api/bootstrap": 401,
+    "/api/state": 401,
+    "/demo/app.mjs": 401,
+    "/src/domain/inventory.mjs": 401,
+    "/data/test-catalog.mjs": 401
+  },
+  "moveId": "demo-move-1",
+  "revision": 1,
+  "beforeBoot": {
+    "bootId": "440690fa-e5ed-466e-ac6e-a23741e03de1",
+    "buildId": "930001dfa9392d829be329c8c53cbc59c9af8f51-2026-11-12T08:10:09.076Z",
+    "revision": 1,
+    "storage": "durable-sqlite",
+    "mode": "test"
+  },
+  "afterBoot": {
+    "bootId": "81dd26e3-a0ac-47bf-827c-a259fe2fbeff",
+    "buildId": "930001dfa9392d829be329c8c53cbc59c9af8f51-2026-11-12T08:10:09.076Z",
+    "revision": 1,
+    "storage": "durable-sqlite",
+    "mode": "test"
+  },
+  "stateSha256": "38f102776b46613a6b53b6e10f7e8583fe6e4f97d6082c980b19ac125f6f6669",
+  "backup": {
+    "sha256": "1289ce58cfcda8447c162d390b835f6b6ba720650cced001ed8787e5b2e31b95",
+    "createdAt": "2026-11-12T08:08:12.644Z",
+    "tables": {
+      "metadata": 3,
+      "app_state": 1,
+      "commands": 1,
+      "users": 17,
+      "sessions": 4,
+      "login_limits": 0,
+      "drafts": 1
+    }
+  },
+  "checks": [
+    "HTTPS gate",
+    "all assets and API protected",
+    "Secure session cookie",
+    "server mode",
+    "two independent sessions see same state",
+    "correct stock decrement",
+    "duplicate command replay",
+    "stale revision rejected",
+    "wrong actor rejected",
+    "foreign Origin rejected",
+    "actual Durable Object restart",
+    "state/history/draft retained after restart",
+    "backup checksum and new SQLite restore",
+    "idempotency retained after restore",
+    "state/history/draft retained across deployment",
+    "restart endpoint disabled",
+    "test issue cancelled with audited workflow",
+    "initial stocks restored",
+    "test draft removed"
+  ],
+  "completedAt": "2026-11-12T08:15:51.997Z",
+  "finalStatus": {
+    "bootId": "8389cef6-f630-46c0-8dfc-d730671048cb",
+    "buildId": "930001dfa9392d829be329c8c53cbc59c9af8f51-working-tree-2026-11-12T08:14:53.423Z",
+    "revision": 1,
+    "storage": "durable-sqlite",
+    "mode": "test"
+  },
+  "finalRevision": 2,
+  "finalBackup": {
+    "sha256": "b484c41c383554cda3f3d5561a716b106db91cfd966f93dd269388492e0c2dc9",
+    "createdAt": "2026-11-12T08:11:54.945Z",
+    "tables": {
+      "metadata": 3,
+      "app_state": 1,
+      "commands": 2,
+      "users": 17,
+      "sessions": 6,
+      "login_limits": 0,
+      "drafts": 0
+    }
+  },
+  "localTests": {
+    "passed": 62,
+    "failed": 0
+  },
+  "browserChecks": {
+    "browsers": [
+      "Chrome",
+      "ChatGPT in-app browser"
+    ],
+    "roles": [
+      "warehouse manager",
+      "Saloon receiver"
+    ],
+    "sameIssue": "Á-0001",
+    "afterRedeploy": true,
+    "consoleErrors": 0
+  }
+}
