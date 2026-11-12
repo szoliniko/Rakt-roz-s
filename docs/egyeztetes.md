@@ -23,6 +23,8 @@
 
 ## Ellenőrzött környezeti tények
 
+- **2026. november 12., hosztolás:** a felhasználó a teljes szerveres alkalmazás működő webcímét, tartós adatbázisát, védett hozzáférését, mentését és újraindítás utáni adatmegőrzését kérte. A közvetlen Cloudflare/Wrangler hozzáférést külön engedélyezte. A [Cloudflare-tesztüzem](cloudflare-hosztolas.md) telepítve és külső címen ellenőrizve; a tesztadatok és éles StoreHouse-kapcsolat közötti határ változatlan.
+
 - A projekt tárolójában a készségek letöltése előtt nem volt alkalmazáskód.
 - A digitalizált forrás: `/workspace/documents/rkeeper/Rkeeper_digitalis_atirat.md`.
 - A felhasználó megerősítette, hogy a raktárkészletet StoreHouse-ban vezetik. A jelenlegi vendéglátóhelyi rendszerhez nincs ellenőrzött kapcsolat ebben a környezetben; a StoreHouse-verzió, a QUSH és az API elérhetősége/működése továbbra is ellenőrizendő. A régi PDF ezekre nem szolgáltat telepítési bizonyítékot.

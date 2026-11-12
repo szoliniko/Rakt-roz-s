@@ -11,13 +11,19 @@ import { backupDatabase, restoreDatabase } from '../scripts/backup.mjs';
 
 const instant='2026-10-27T10:00:00.000Z';
 const issue={type:'MOVE_CREATE',kind:'issue',from:'Fő raktár',to:'Saloon',lines:[{productId:'water',quantity:7,unit:'db'}]};
-function fixture(t){const dir=mkdtempSync(join(tmpdir(),'warehouse-backend-'));t.after(()=>rmSync(dir,{recursive:true,force:true}));return dir;}
-function store(t,{filename,clock=()=>new Date(instant)}={}){const dir=filename?null:fixture(t);const s=new WarehouseStore({filename:filename??join(dir,'db.sqlite'),clock,initialState:createState()});t.after(()=>{try{s.close();}catch{}});return s;}
+function fixture(t){
+  const dir=mkdtempSync(join(tmpdir(),'warehouse-backend-'));
+  // Node runs hooks in registration order. Close SQLite/HTTP before removing
+  // their directory, including on Windows where an open database locks files.
+  t.after(async()=>{for(const close of t.warehouseCleanup??[])await close();rmSync(dir,{recursive:true,force:true});});
+  return dir;
+}
+function store(t,{filename,clock=()=>new Date(instant)}={}){const dir=filename?null:fixture(t);const s=new WarehouseStore({filename:filename??join(dir,'db.sqlite'),clock,initialState:createState()});(t.warehouseCleanup??=[]).push(()=>{try{s.close();}catch{}});return s;}
 function manager(s){return s.user('test-manager');}
 async function httpFixture(t,{database,clock=()=>new Date(instant)}={}){
   const dir=database?null:fixture(t);const app=createWarehouseServer({database:database??join(dir,'db.sqlite'),clock,initialState:createState()});
   await new Promise(resolve=>app.server.listen(0,'127.0.0.1',resolve));
-  t.after(async()=>{if(app.server.listening)await app.close();});
+  (t.warehouseCleanup??=[]).push(async()=>{if(app.server.listening)await app.close();});
   const base=`http://127.0.0.1:${app.server.address().port}`;
   async function request(path,{method='GET',data,cookie,headers={}}={}){
     const response=await fetch(base+path,{method,headers:{...(data?{'Content-Type':'application/json'}:{}),...(cookie?{'Cookie':cookie}:{}),...headers},...(data?{body:JSON.stringify(data)}:{})});

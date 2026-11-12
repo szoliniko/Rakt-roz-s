@@ -1,5 +1,7 @@
 # Átadás: böngészőből elérhető szerveres tesztüzem
 
+**2026. november 12-i kiegészítés:** a [védett Cloudflare-tesztüzem elkészült és ellenőrzött](cloudflare-hosztolas.md), tényleges újraindítással, új telepítéssel, két külön böngészővel és mentés-visszaállítással. Az alábbi októberi leírás a kiinduló Node-változat és az átadási feltételek történeti dokumentuma; a felhős változat tartós Durable Object SQLite-adattárat használ.
+
 2026. október 27. · A felhasználó egy megnyitható linket kér, amely mögött valódi kiszolgáló és tartós közös adatbázis működik. A futtatás helye mellékes. A GitHub-feltöltést és a másik munkamenetben történő Sites-publikálást kérte lehetséges folytatásként. Ez a lap a következő megvalósító számára készült; nem állít már létező külső címet vagy sikeres telepítést.
 
 Kapcsolódó követelmények: ALAP-05/07, SZER-02, KAP-05–07; NYIT-01 és NYIT-15 továbbra is nyitott. A [működési terv](mukodesi-terv-vazlat.md), [követelményjegyzék](kovetelmenyjegyzek.md) és [ellenőrzött megvalósítás](alapok-megvalositasa.md) a teljes feladat alapja.

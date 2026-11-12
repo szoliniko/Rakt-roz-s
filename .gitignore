@@ -13,3 +13,6 @@ __pycache__/
 runtime/
 *.log
 *.zip
+node_modules/
+.wrangler/
+.dev.vars*

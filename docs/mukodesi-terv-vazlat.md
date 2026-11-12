@@ -14,6 +14,8 @@
 
 ## Elfogadott működési alapok megvalósítása
 
+**2026. november 12.:** a kért linkes kiszolgálás [Cloudflare-en elkészült és külső HTTPS-címen ellenőrzött](cloudflare-hosztolas.md). A teljes meglévő tesztalkalmazás erős hozzáférési kapu mögött, tartós közös SQLite-adattárral működik. Igazolt a valódi újraindítás és új telepítés utáni adatmegőrzés, a külön böngészős közös ügy és az ellenőrzött mentés-visszaállítás. Ez az ALAP-05/07, SZER-02, KAP-05–07 tesztüzemi bizonyítéka; nem zárja le az éles integrációt vagy a felhasználói elfogadást (NYIT-01/15).
+
 A következő kipróbálási cél egy linkkel elérhető, tartós adatbázissal működő kiszolgáló. A felhasználó engedélyezte a GitHub-átadást másik Work/Sites munkamenet számára; a gép helye nem követelmény. A [hosztolási átadás](hosztolas-atadas.md) az indítást és az ellenőrzést rögzíti. Statikus HTML-publikálás, GitHub-feltöltés vagy helyi HTTP-próba önmagában nem bizonyítja a felhasználó számára elérhető szerveres működést; NYIT-15 továbbra is nyitott.
 
 A felhasználó a [szükséges alapok](alapmukodes-felulvizsgalat.md) megvalósítását kérte, a későbbi r_keeper/StoreHouse-kapcsolatra előkészített szerkezettel. A [rétegek és felelősségek](alkalmazas-architektura.md), valamint a [kilenc alap megvalósítási lefedettsége](alapok-megvalositasa.md) a terv melléklete. Az új technikai alap nem helyettesíti a tényleges API-feltárást.
